@@ -11,7 +11,8 @@
                 <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
             </a>
             <ul class="site-navigation">
-                <li><a href="catalog.html">Каталог</a>
+                <li>
+                    <a href="catalog.html">Каталог</a>
                     <ul class="site-navigation-inner">
                         <li><a href="catalog-new.html">Новинки</a></li>
                         <li><a href="catalog-creamy.html">Сливочное</a></li>
@@ -23,25 +24,41 @@
                 <li><a href="conditions.html">Доставка и оплата</a></li>
                 <li><a href="info.html">О Компании</a></li>
             </ul>
-            <a class="button" href="search.html">Поиск</a>
+            <button class="button" aria-label="Поиск"></button>
             <a class="button" href="login.html">Вход</a>
-            <a class="button" href="cart.html">Пусто</a>
+            <a class="button" href="cart.html" aria-label="Корзина">Пусто</a>
             <p class="main-header-contacts">С 10 до 20, ежедневно <br> <span>8 812 450-25-25</span></p> 
         </nav>
     </header>
     <main class="container">
         <h1 class="visually-hidden">Магазин Gllacy</h1>
-        <a class="button" href=#>Давайте оба!</a>
+        <ul class="background-select-list">
+            <li class="background-select-item">
+                <input type="radio" class="background-selector visually-hidden" name="background-selectors" id="first-background">
+                <label class="visually-hidden" for="first-background">Крем-брюле и пломбир с малиновым джемом</label>
+            </li>
+            <li class="background-select-item">
+                <input type="radio" class="background-selector visually-hidden" name="background-selectors" id="second-background">
+                <label class="visually-hidden" for="second-background">Шоколадный пломбир и лимонный сорбет</label>
+            </li>
+            <li class="background-select-item">
+                <input type="radio" class="background-selector visually-hidden" name="background-selectors" id="third-background">
+                <label class="visually-hidden" for="third-background">Пломбир с помадкой и клубничный щербет</label>
+            </li>
+        </ul>
+        <!--Думаю, что переключение фона надо бы вынести в, например, :before. Или что-то вроде этого. Не уверена, надо ли его было прописывать на данном этапе.-->
+        <a class="button big-button" href="catalog.html">Давайте оба!</a>
+        <!-- ссылка, в каталог. В теории,  могла бы быть кнопка, которая закидывает 2 мороженых с фона в корзину, но надо было бы определять какой фон в данный момент активен.  -->
         <section class="promo-list">
             <div class="promo-item promo-raspberries">
                   <h2>Малинка даром!</h2>
                     <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья  бесплатно.</p>
-                    <a class="button" href=#>Хочу варенье!</a>
+                    <a class="button big-button" href="catalog.html">Хочу варенье!</a>
             </div>
             <div class="promo-item promo-chocolate">
                   <h2>Шоколадки даром!</h2>
                     <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                    <a class="button" href=#>Хочу шоколадки!</a>
+                    <a class="button big-button" href="catalog.html">Хочу шоколадки!</a>
             </div>
         </section>
         <section class="hit-items">
@@ -50,26 +67,26 @@
                 <li class="hit-item item">
                     <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <p class="item-price">310&#8381;<span>/кг</span></p>
-                    <p class="item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-                    <a class="button" href="#">Быстрый просмотр</a>
+                    <p class="item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p> <!-- является ли текст ссылкой на страницу товара?-->                    
+                    <button class="button big-button">Быстрый просмотр</button>
                 </li>
                 <li class="hit-item item">
                     <img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <p class="item-price">380&#8381;<span>/кг</span></p>
                     <p class="item-description">Сливочно-кофейное с кусочками шоколада</p>
-                    <a class="button" href="#">Быстрый просмотр</a>
+                    <button class="button big-button">Быстрый просмотр</button>
                 </li>
                 <li class="hit-item item">
                     <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <p class="item-price">355&#8381;<span>/кг</span></p>
                     <p class="item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
-                    <a class="button" href="#">Быстрый просмотр</a>
+                    <button class="button big-button">Быстрый просмотр</button>
                 </li>
                 <li class="hit-item item">
                     <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <p class="item-price">415&#8381;<span>/кг</span></p>
                     <p class="item-description">Сливочное крем-брюле с карамельной подливкой</p>
-                    <a class="button" href="#">Быстрый просмотр</a>
+                    <button class="button big-button">Быстрый просмотр</button>
                 </li>
             </ul>    
         </section>
@@ -86,17 +103,19 @@
         <article class="blog-news">
             <h2 class="visually-hidden">Блог</h2>
             <p>Новое в нашем блоге</p>
-            <a class="blog-news-transition">10 способов сервировки фруктовых щербетов к столу</a>
+            <a class="blog-news-transition" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <section class="subscription">
             <h2 class="visually-hidden">Подписка</h2>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всяякой ненужной ерунды. Честно =)</p>
-            <form action="#" method="get">
-                <input name="e-mail" placeholder="Электронная почта" type="text">
-                <button type="submit">Отправить</button>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <input id="email" name="email" placeholder="Электронная почта" type="email">
+                <button  class="button big-button">Отправить</button>
             </form>
         </section>
         <section class="map">
+            <h2 class="visually-hidden">Месторасположение магазина и контакты</h2>
             <!-- Карта видимо - фон для блока -->
             <div class="map-information">
                 <p>Адрес главного офиса и офлайн-магазина: <br> 
@@ -109,41 +128,68 @@
                 <a class="button" href="contacts.html">Форма обратной связи</a>
             </div>
         </section>
-        <footer class="main-footer">
-            <ul class="footer-social">
-                <li><a class="social-button social-button-tw" href="#">Твиттер</a></li>
-                <li><a class="social-button social-button-in" href="#">Инстаграм</a></li>
-                <li><a class="social-button social-button-fb" href="#">Фейсбук</a></li>
-                <li><a class="social-button social-button-vk" href="#">Вконтакте</a></li>
-            </ul>
-            <ul class="footer-menu">
-                <li><a href="#">Для поставщиков</a></li>
-                <li><a href="#">О производстве </a></li>
-                <li><a href="#">Наши документы</a></li>
-                <li><a href="#">Экологические стандарты</a></li>
-            </ul>
-            <p class="footer-copyright">
-                Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>	&copy; 2017
-            </p>
-        </footer>
-        
-
-        <section class="modal modal-search">
-            <!-- Здесь будет форма -->
-        </section>        
-        <section class="modal modal-login">
-            <!-- Здесь будет форма -->
-            <button type="submit">Войти</button>
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Регистрация</a>
-        </section>
-        <section class="modal modal-connection">
-            <h2>Мы обязательно вам ответим!</h2>
-            <!-- Здесь будет форма -->
-            <button type="submit">Отправить</button>
-            <span class="modal-close">x</span>
-        </section>        
-        
     </main>
+    <footer class="main-footer">
+        <ul class="footer-social">
+            <li><a class="social-button social-button-tw" href="#" aria-label="Твиттер">Твиттер</a></li>
+            <li><a class="social-button social-button-in" href="#" aria-label="Инстаграм">Инстаграм</a></li>
+            <li><a class="social-button social-button-fb" href="#" aria-label="Фейсбук">Фейсбук</a></li>
+            <li><a class="social-button social-button-vk" href="#" aria-label="Вконтакте">Вконтакте</a></li>
+            <!-- Установлены лейблы, т.к. в дальнейшем надпимей не будет, а только картинки-->
+        </ul>
+        <ul class="footer-menu">
+            <li><a href="#">Для поставщиков</a></li>
+            <li><a href="#">О производстве </a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
+        </ul>
+        <p class="footer-copyright">
+            Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>	&copy; 2017
+        </p>
+     </footer>
+        
+    <section class="modal modal-search">
+        <h2 class="visually-hidden">Поиск по сайту</h2>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input id="search" type="text" name="search" placeholder="Что ищем?">
+        </form>
+     </section>
+        
+     <section class="modal modal-login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин" required>
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль" required>
+            </p>
+            <button class="button big-button">Войти</button>
+        </form>
+        <a class="modal-login-link" href="#">Забыли пароль?</a>
+        <a class="modal-login-link" href="#">Регистрация</a>
+    </section>
+        
+    <section class="modal modal-connection">
+        <h2>Мы обязательно вам ответим!</h2>
+        <form  class="connection-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="appointment-item">
+                <label class="visually-hidden" for="modal-connection-name">Ваше имя</label>
+                <input id="modal-connection-name" type="text" name="name" value="" placeholder="Как вас зовут?" required>
+            </p>
+            <p>                
+                <label class="visually-hidden" for="modal-connection-email">Электронная почта</label>
+                <input id="modal-connection-email" name="modal-connection-email" placeholder="Ваша почта для ответа?" type="email" required>
+            </p>
+            <p>                
+                <textarea placeholder="Напишите что-нибудь..." required></textarea>
+            </p>
+            <button class="button big-button">Отправить</button>
+        </form>
+        <button class="modal-close" type="button" aria-label="Закрытие модального окна">Закрыть</button>
+    </section>        
   </body>
 </html>
