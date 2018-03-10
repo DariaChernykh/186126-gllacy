@@ -178,14 +178,15 @@
         <form  class="connection-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="appointment-item">
                 <label class="visually-hidden" for="modal-connection-name">Ваше имя</label>
-                <input id="modal-connection-name" type="text" name="name" value="" placeholder="Как вас зовут?" required>
+                <input id="modal-connection-name" type="text" name="name" placeholder="Как вас зовут?" required>
             </p>
             <p>                
                 <label class="visually-hidden" for="modal-connection-email">Электронная почта</label>
                 <input id="modal-connection-email" name="modal-connection-email" placeholder="Ваша почта для ответа?" type="email" required>
             </p>
-            <p>                
-                <textarea placeholder="Напишите что-нибудь..." required></textarea>
+            <p>     
+                <label class="visually-hidden" for="modal-connection-text">Текст обращения</label>
+                <textarea id="modal-connection-text" placeholder="Напишите что-нибудь..." required></textarea>
             </p>
             <button class="button big-button">Отправить</button>
         </form>
