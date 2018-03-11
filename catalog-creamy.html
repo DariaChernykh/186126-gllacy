@@ -44,19 +44,19 @@
                 <p>
                     <label for="filter-select">Сортировка:</label>
                     <select id="filter-select">
-                        <option value="по популярности">по популярности</option>
-                        <option value="сначала недорогие">сначала недорогие</option>
-                        <option value="сначала дорогие">сначала дорогие</option>
-                        <option value="по жирности">по жирности</option>
+                        <option value="popularity">по популярности</option>
+                        <option value="cheaper">сначала недорогие</option>
+                        <option value="expensive">сначала дорогие</option>
+                        <option value="fat-content">по жирности</option>
                     </select>
                 </p>
                 <p>
                     <label for="price">Цена: 100 руб. – 500 руб.</label>
                     <input type="range" name="price" id="price"> <!--В гугле говорят, что рейнж с двумя ползунками можно только на js сделать-->
                 </p>
-                <fieldset>
-                    <legend>Жирность:</legend>
-                    <ul>
+                <fieldset class="fieldset-filter fieldset-filter-fat">
+                    <legend class="legend-fieldset">Жирность:</legend>
+                    <ul class="filter-fat-content-list">
                         <li class="filter-option">
                             <input  class="visually-hidden filter-input filter-input-radio" type="radio" name="filter-fat" id="filter-fat-none" value="none">
                             <label for="filter-fat-none">0%</label>
@@ -75,32 +75,32 @@
                         </li>   
                     </ul>
                 </fieldset>
-                <fieldset>
-                    <legend>Наполнители:</legend>
-                    <ul>
+                <fieldset class="fieldset-filter fieldset-filter-additive">
+                    <legend  class="legend-fieldset">Наполнители:</legend>
+                    <ul class="filter-additive-list">
                         <li class="filter-option">
-                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive" id="filter-additive-chocolate" value="chocolate" checked>
+                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive-chocolate" id="filter-additive-chocolate" value="chocolate" checked>
                             <label for="filter-additive-chocolate">шоколадные</label>
                         </li>    
                         <li class="filter-option">
-                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive" id="filter-additive-sugar" value="sugar" checked>
+                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive-sugar" id="filter-additive-sugar" value="sugar" checked>
                             <label for="filter-additive-sugar">сахарные присыпки</label>
                         </li>   
                         <li class="filter-option">
-                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive" id="filter-additive-fruit" value="fruit">
+                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive-fruit" id="filter-additive-fruit" value="fruit">
                             <label for="filter-additive-fruit">фрукты</label>
                         </li>   
                         <li class="filter-option">
-                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive" id="filter-additive-syrup" value="syrup">
+                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive-syrup" id="filter-additive-syrup" value="syrup">
                             <label for="filter-additive-syrup">сиропы</label>
                         </li>   
                         <li class="filter-option">
-                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive" id="filter-additive-jam" value="jam">
+                            <input  class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filter-additive-jam" id="filter-additive-jam" value="jam">
                             <label for="filter-additive-jam">джемы</label>
                         </li>  
                     </ul>
                 </fieldset>
-                <button class="button">Применить</button>
+                <button class="button" type="submit">Применить</button>
             </form>
         </section>
         
@@ -111,73 +111,73 @@
                         <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                         <p class="item-price">310&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                         <p class="item-price">380&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-кофейное с кусочками шоколада</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                         <p class="item-price">355&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                         <p class="item-price">415&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное крем-брюле с карамельной подливкой</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/1-1.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
                         <p class="item-price">325&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное с брусничным джемом</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/2-1.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
                         <p class="item-price">410&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-черничное с цельными ягодами черники</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/3-1.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                         <p class="item-price">375&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-лимонное с карамельной присыпкой</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/4-1.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
                         <p class="item-price">320&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное с шоколадной стружкой</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/1-2.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                         <p class="item-price">440&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-ванильное с кусочками шоколада</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/2-2.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
                         <p class="item-price">435&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочноe с ментоловым сиропом</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/3-2.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                         <p class="item-price">355&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное с кусочками черного шоколада</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="item">
                         <img src="img/4-2.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
                         <p class="item-price">420&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное с мятным сиропом</p>
-                        <button class="button big-button">Быстрый просмотр</button>
+                        <a class="button big-button" href="#">Быстрый просмотр</a>
                     </li>
                 </ul>
                 <ul class="pagination-list">
@@ -226,7 +226,7 @@
                 <label class="visually-hidden" for="user-password">Пароль</label>
                 <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль" required>
             </p>
-            <button class="button big-button">Войти</button>
+            <button class="button big-button" type="submit">Войти</button>
         </form>
         <a class="modal-login-link" href="#">Забыли пароль?</a>
         <a class="modal-login-link" href="#">Регистрация</a>
@@ -235,13 +235,13 @@
     <section class="modal modal-cart">
         <table class="products-in-cart">
             <tr>
-                <td><button class="modal-close delete-position" type="button" aria-label="Удаление позиции"></button></td>
+                <td><a class="delete-position" aria-label="Удаление позиции" href="#"></a></td>
                 <td><img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</td>
                 <td>1,5 кг x<span> 200 руб.</span></td>
                 <td>300 руб.</td>
             </tr>
             <tr>
-                <td><button class="modal-close delete-position" type="button" aria-label="Удаление позиции"></button></td>
+                <td><a class="delete-position" aria-label="Удаление позиции" href="#"></a></td>
                 <td><img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с посыпкой из белого шоколада">Клубничный пломбир с посыпкой из белого шоколада</td>
                 <td>1,5 кг x<span> 300 руб.</span></td>
                 <td>450 руб.</td>
