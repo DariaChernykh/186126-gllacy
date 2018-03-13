@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    
+    background-color: #849d8f;
+    background-image: url(../img/background-1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+a{
+    color: #ffffff;
+}
+.main-navigation > a, 
+.main-navigation > p{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.main-navigation > a{
+    font-weight: 500;
+}
+.main-navigation span{
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.main-navigation ul{
+    list-style: none;
+}
+
+.site-navigation{
+    line-height: 18px;
+}
+
+.site-navigation-inner{
+    font-size: 14px;
+    line-height: 16px;
+}
+.site-navigation-inner  li:not(:first-child){
+    font-weight: 400;
+}
