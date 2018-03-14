@@ -38,10 +38,305 @@ a{
     line-height: 18px;
 }
 
+.site-navigation-item a:hover, 
+.menu-button:hover{
+    color: #333333;
+    background-color: #f7f6f3;
+}
+.menu-button, 
+.site-navigation-inner a{    
+    text-decoration: none;
+}
+
+.menu-button{
+    background-color: rgba(255, 255, 255, 0.19);
+}
+
 .site-navigation-inner{
     font-size: 14px;
     line-height: 16px;
+    background-color: #f8f7f4;
 }
-.site-navigation-inner  li:not(:first-child){
+.site-navigation-inner a{    
+    color: #333333;
+}
+
+.inner-item a{
     font-weight: 400;
+}
+
+.site-navigation-inner a:hover{
+    background-color: #fbded7;
+}
+
+.site-navigation-inner a:active{
+    background-color: #f6b5a5;
+}
+.button{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    
+    background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+}   
+
+.button:hover{
+    box-shadow: inset 0 50px rgba(255, 255, 255, 0.2);
+}
+
+.button:active{
+    box-shadow: inset 0 50px rgba(0, 0, 0, 0.07);
+}
+
+.big-button{
+    font-size: 32px;
+    line-height: 44px; 
+}
+/*ПРОМО*/
+.promo-item h2{
+    font-size: 35px;
+    line-height: 41px;  
+}
+
+.promo-item p{
+    font-size: 18px;   
+}
+
+.promo-raspberries{
+    background-image: url(../img/back-raspberries.jpg);
+    background-repeat: no-repeat;
+}
+
+.promo-chocolate{
+    background-image: url(../img/back-chocolate.jpg);
+    background-repeat: no-repeat;
+}
+/*ТОВАРЫ*/
+.item-list{
+    list-style: none;
+}
+.item{
+    text-align: center;
+}
+
+.item-price{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.item-price span{
+    font-size: 33px;
+}
+
+.item-description{    
+    text-decoration: underline;
+    font-weight: 500;
+}
+/*SEO*/
+.features{
+    color: #323232;
+    
+    background-image: url(../img/back-wafer.jpg);
+}
+
+.features p{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.features-list{
+    list-style: none;
+    font-weight: 400;
+}
+/*BLOG*/
+.blog-news{
+    background-image: url(../img/back-strawberries.jpg);
+    background-repeat: no-repeat;
+}
+blog-news p{
+    font-weight: 500;
+}
+
+.blog-news-transition{
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+}
+/*SUBSCRIPTION*/
+.subscription{
+    background-color: #f8f7f4;
+}
+
+.subscription p{
+    font-weight: 400;
+    color: #5a5a5a;
+}
+/*MAP*/
+.map {
+    background-image: url(../img/pin-on-map.png);
+    background-repeat: no-repeat;
+}
+
+.map-information{
+    background-color: #fefefe;
+    color: #323232;
+}
+
+.map-information p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.map-information span{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+/*FOOTER*/
+.main-footer ul{
+    list-style: none;
+}
+.footer-menu li{
+    font-size: 13px;
+    line-height: 18px;
+}
+.footer-menu li:not(:first-child){
+    font-weight: 400;
+}
+.footer-copyright{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.white-link:hover, 
+.white-link:active{
+    color: #ffbc9e;
+}
+/*MODAL*/
+.modal{
+    background-color: #f8f7f4;
+}
+
+.modal-login-link{
+    font-size: 13px;
+    line-height: 24px;
+    color: #323232;
+    font-weight: 400;
+}
+.modal-login-link:hover, 
+.modal-login-link:active{
+    color: #ffbc9e;
+}
+.modal-connection h2{
+    font-size: 24px;
+    line-height: 28px;
+    color: #323232;
+    font-weight: 500;
+}
+/* КАТАЛОГ!!!*/
+.current-page > a{    
+    background-color: #d07058;
+    color: #ffffff;
+    
+}
+.full-cart{
+    color: #333333;
+    background-color: #f7f6f3;
+}
+.breadcrumbs{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    list-style: none;
+}
+.second-page h1{
+    font-size: 35px;
+    line-height: 41px;
+}
+/*FILTERS*/
+.filters {
+    font-weight: 500;
+}
+.filters label, 
+.filters legend{
+    font-size: 14px;
+    line-height: 16px;
+    
+}
+.filters input, 
+.filter-button{
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+.filters ul, 
+.filters select, 
+.background-input, 
+.filter-button{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.filters ul{
+    list-style: none;
+}
+
+.filters select{
+    color: #ffffff;
+}
+
+.filters select:hover{
+    color: #323232;
+}
+.background-input input{
+    cursor: pointer;
+}
+.filter-button{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+}
+
+.filter-button:hover{
+    background-color: #ffffff;
+    color: #323232;
+}
+
+.filter-button:active{
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+}
+/*pagination-list*/
+.pagination-list{
+    list-style: none;
+}
+
+.pagination-list a{
+    text-decoration: none;
+}
+.pagination-item a:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item-current a, 
+.pagination-item a:active{
+    background-color: #ffffff; color: #323232;
+}
+
+/*CART*/
+.products-in-cart{
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+}
+.products-in-cart span{
+    color: #999999;
+}
+.products-in-cart tr:last-child{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
 }
