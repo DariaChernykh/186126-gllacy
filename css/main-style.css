@@ -1,5 +1,8 @@
 body{
-    margin: 0;
+    max-width: 1200px;
+    min-width: 900px;
+    min-width: 900px;
+    margin: 0 auto;
     padding: 0;
    
     font-family: Roboto, Arial, sans-serif;
@@ -7,14 +10,27 @@ body{
     line-height: 22px;
     font-weight: 700;
     color: #ffffff;
+
     
     background-color: #849d8f;
     background-image: url(../img/background-1.png);
     background-position: top center;
     background-repeat: no-repeat;
 }
+.second-page{
+    background-image: none;
+}
 a{
     color: #ffffff;
+}
+.main-navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 27px;
+}
+.site-navigation-left{    
+    display: flex;
+    justify-content: space-between;
 }
 .main-navigation > a, 
 .main-navigation > p{
@@ -96,10 +112,24 @@ a{
     font-size: 32px;
     line-height: 44px; 
 }
+.container{
+    padding: 0 27px;
+}
 /*ПРОМО*/
+.promo-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 280px;
+}
+
+.promo-item{
+    max-width: 560px;
+    height: 230px;
+    padding-left: 20px; 
+}
 .promo-item h2{
     font-size: 35px;
-    line-height: 41px;  
+    line-height: 41px;
 }
 
 .promo-item p{
@@ -112,18 +142,28 @@ a{
 }
 
 .promo-chocolate{
+    margin-left: 26px;
     background-image: url(../img/back-chocolate.jpg);
     background-repeat: no-repeat;
 }
 /*ТОВАРЫ*/
 .item-list{
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none; 
+    
 }
 .item{
-    text-align: center;
+    max-width: 267px;
 }
 
 .item-price{
+    margin-top:-65px;
+    margin-bottom: 0;
     font-size: 45px;
     line-height: 45px;
 }
@@ -132,12 +172,16 @@ a{
     font-size: 33px;
 }
 
-.item-description{    
+.item-description{   
+    text-align: center;
     text-decoration: underline;
     font-weight: 500;
 }
 /*SEO*/
 .features{
+    padding: 10px; 
+    margin-bottom: 40px;
+    
     color: #323232;
     
     background-image: url(../img/back-wafer.jpg);
@@ -149,25 +193,50 @@ a{
     font-weight: 500;
 }
 .features-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
     list-style: none;
     font-weight: 400;
 }
+.features-list li{
+    max-width: 540px;
+    margin-bottom: 20px;
+}
 /*BLOG*/
+.blog-and-subscription{
+    display: flex;
+    margin-bottom: 40px;
+}
 .blog-news{
+    max-width: 560px;
+    height: 220px;
+    padding: 0 20px; 
+    
     background-image: url(../img/back-strawberries.jpg);
     background-repeat: no-repeat;
 }
-blog-news p{
+.blog-news p:first-of-type{
     font-weight: 500;
+    color: #323232;
 }
 
 .blog-news-transition{
+    margin-right: 200px;
+}
+
+.blog-news-transition a{
     font-size: 24px;
     line-height: 30px;
     color: #323232;
 }
 /*SUBSCRIPTION*/
-.subscription{
+.subscription{  
+    max-width: 560px;
+    height: 220px;
+    padding: 0 20px; 
+    
     background-color: #f8f7f4;
 }
 
@@ -177,11 +246,17 @@ blog-news p{
 }
 /*MAP*/
 .map {
+    width: 100%;
+    min-height: 430px;
+    border-top: 1px solid transparent;
     background-image: url(../img/pin-on-map.png);
     background-repeat: no-repeat;
 }
 
 .map-information{
+    width: 302px;
+    min-height: 305px;
+    margin: 63px 27px 63px auto;
     background-color: #fefefe;
     color: #323232;
 }
@@ -196,6 +271,10 @@ blog-news p{
     font-weight: 700;
 }
 /*FOOTER*/
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+}
 .main-footer ul{
     list-style: none;
 }
@@ -216,9 +295,25 @@ blog-news p{
 .white-link:active{
     color: #ffbc9e;
 }
+
 /*MODAL*/
 .modal{
+    padding: 20px 16px;
     background-color: #f8f7f4;
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    
+}
+
+.modal-search input, .modal-login input{
+    width: 100%;
+}
+
+.modal-search{
+    width: 341px;    
+}
+.modal-login{
+    width: 277px;
 }
 
 .modal-login-link{
@@ -230,6 +325,16 @@ blog-news p{
 .modal-login-link:hover, 
 .modal-login-link:active{
     color: #ffbc9e;
+}
+
+.modal-connection{
+    width: 478px;
+}
+.modal-connection input{
+    width: 271px;
+}
+.modal-connection textarea{
+    width: 432px;
 }
 .modal-connection h2{
     font-size: 24px;
@@ -248,17 +353,23 @@ blog-news p{
     background-color: #f7f6f3;
 }
 .breadcrumbs{
+    display:flex;
+    justify-content: flex-start;
     font-size: 14px;
     line-height: 16px;
-    font-weight: 400;
     list-style: none;
+    font-weight: 400;
 }
 .second-page h1{
     font-size: 35px;
     line-height: 41px;
 }
 /*FILTERS*/
-.filters {
+.filter {
+    max-width: 880px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     font-weight: 500;
 }
 .filters label, 
@@ -310,6 +421,8 @@ blog-news p{
 }
 /*pagination-list*/
 .pagination-list{
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
 }
 
@@ -326,6 +439,9 @@ blog-news p{
 }
 
 /*CART*/
+.modal-cart{
+    width: 540px;
+}
 .products-in-cart{
     font-size: 13px;
     line-height: 16px;

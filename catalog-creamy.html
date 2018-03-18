@@ -7,14 +7,15 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main-style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="second-page">
     <header class="main-header">
         <nav class="main-navigation">
-            <a class="main-header-logo" href="index.html" aria-label="Главная страница магазина Gllacy">
+            <div class="site-navigation-left">
+                <a class="main-header-logo" href="index.html" aria-label="Главная страница магазина Gllacy">
                 <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Gllacy">
-            </a>
-            <ul class="site-navigation">
-                <li class="site-navigation-item current-page">
+                </a>
+                <ul class="site-navigation">
+                    <li class="site-navigation-item current-page">
                     <a href="catalog.html">Каталог</a>
                     <ul class="site-navigation-inner">
                         <li class="inner-item"><a href="catalog-new.html">Новинки</a></li>
@@ -24,16 +25,19 @@
                         <li class="inner-item"><a href="catalog-melorin.html">Мелорин</a></li>
                     </ul>  
                 </li>
-                <li class="site-navigation-item"><a href="conditions.html">Доставка и оплата</a></li>
-                <li class="site-navigation-item"><a href="info.html">О Компании</a></li>
-            </ul>
-            <button class="menu-button" aria-label="Поиск"></button>
-            <a class="menu-button" href="login.html">Вход</a>
-            <a class="menu-button full-cart" href="cart.html" aria-label="Корзина">2 товара</a>
-            <p class="main-header-contacts">С 10 до 20, ежедневно <br> <span>8 812 450-25-25</span></p> 
+                    <li class="site-navigation-item"><a href="conditions.html">Доставка и оплата</a></li>
+                    <li class="site-navigation-item"><a href="info.html">О Компании</a></li>
+                </ul>
+            </div>    
+            <div class="site-navigation-right">
+                <button class="menu-button" aria-label="Поиск"></button>
+                <a class="menu-button" href="login.html">Вход</a>
+                <a class="menu-button full-cart" href="cart.html" aria-label="Корзина">2 товара</a>
+                <p class="main-header-contacts">С 10 до 20, ежедневно <br> <span>8 812 450-25-25</span></p> 
+            </div>     
         </nav>
     </header>
-    <main class="container second-page">
+    <main class="container">
         <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -42,7 +46,7 @@
         <h1>Сливочное мороженое</h1>
         
         <section class="filters">
-            <h2 class="visually-hidden">Фильтр товаров</h2>
+           <!-- <h2 class="visually-hidden">Фильтр товаров</h2>-->
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                 <p>
                     <label for="filter-select">Сортировка:</label>
@@ -108,7 +112,7 @@
         </section>
         
         <section class="catalog">
-           <h2 class="visually-hidden">Каталог товаров</h2>
+         <!--  <h2 class="visually-hidden">Каталог товаров</h2>-->
                 <ul class="item-list">
                     <li class="item">
                         <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
