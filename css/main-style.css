@@ -1,7 +1,6 @@
 body{
     max-width: 1200px;
     min-width: 900px;
-    min-width: 900px;
     margin: 0 auto;
     padding: 0;
    
@@ -17,21 +16,29 @@ body{
     background-position: top center;
     background-repeat: no-repeat;
 }
-.second-page{
-    background-image: none;
-}
 a{
     color: #ffffff;
 }
+
+.second-page{
+    background-image: none;
+}
+
+.visually-hidden{
+    display: none;
+}
+
 .main-navigation{
     display: flex;
     justify-content: space-between;
     padding: 10px 27px;
 }
+
 .site-navigation-left{    
     display: flex;
     justify-content: space-between;
 }
+
 .main-navigation > a, 
 .main-navigation > p{
     font-size: 14px;
@@ -124,8 +131,9 @@ a{
 
 .promo-item{
     max-width: 560px;
-    height: 230px;
-    padding-left: 20px; 
+    min-width: 420px;
+    padding-left: 20px;
+    padding-bottom: 20px; 
 }
 .promo-item h2{
     font-size: 35px;
@@ -148,6 +156,7 @@ a{
 }
 /*ТОВАРЫ*/
 .item-list{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -159,8 +168,12 @@ a{
 }
 .item{
     max-width: 267px;
+    min-width: 200px;
 }
-
+.item img{
+    max-width:inherit;
+    height:auto;
+}
 .item-price{
     margin-top:-65px;
     margin-bottom: 0;
@@ -194,25 +207,29 @@ a{
 }
 .features-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     
+    padding: 0;
     list-style: none;
     font-weight: 400;
 }
 .features-list li{
-    max-width: 540px;
+    max-width: 45%;
     margin-bottom: 20px;
+    height: auto;
 }
 /*BLOG*/
 .blog-and-subscription{
     display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
 }
 .blog-news{
     max-width: 560px;
-    height: 220px;
-    padding: 0 20px; 
+    min-width: 420px;
+    padding-left: 20px;
+    flex-grow: 2;
     
     background-image: url(../img/back-strawberries.jpg);
     background-repeat: no-repeat;
@@ -223,7 +240,7 @@ a{
 }
 
 .blog-news-transition{
-    margin-right: 200px;
+    max-width: 300px;
 }
 
 .blog-news-transition a{
@@ -234,9 +251,9 @@ a{
 /*SUBSCRIPTION*/
 .subscription{  
     max-width: 560px;
-    height: 220px;
-    padding: 0 20px; 
-    
+    min-width: 420px;
+    margin-left: 26px;
+    padding-left: 20px;
     background-color: #f8f7f4;
 }
 
@@ -246,11 +263,12 @@ a{
 }
 /*MAP*/
 .map {
-    width: 100%;
+    width: inherit;
     min-height: 430px;
     border-top: 1px solid transparent;
     background-image: url(../img/pin-on-map.png);
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .map-information{
