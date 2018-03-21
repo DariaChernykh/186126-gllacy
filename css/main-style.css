@@ -1,3 +1,4 @@
+html{min-width: 900px;}
 body{
     max-width: 1200px;
     min-width: 900px;
@@ -122,6 +123,11 @@ a{
 .container{
     padding: 0 27px;
 }
+@media (max-width: 900px) {
+.container{
+    padding: 0 20px;
+}
+}
 /*ПРОМО*/
 .promo-list{
     display: flex;
@@ -130,9 +136,7 @@ a{
 }
 
 .promo-item{
-    max-width: 560px;
-    min-width: 420px;
-    padding-left: 20px;
+    width: 560px;
     padding-bottom: 20px; 
 }
 .promo-item h2{
@@ -150,15 +154,18 @@ a{
 }
 
 .promo-chocolate{
-    margin-left: 26px;
     background-image: url(../img/back-chocolate.jpg);
     background-repeat: no-repeat;
 }
+@media (max-width: 900px) {
+  .promo-item{
+    width: 420px;
+}
+}
 /*ТОВАРЫ*/
 .item-list{
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
     flex-wrap: wrap;
     margin-top: 40px;
     margin-bottom: 0;
@@ -167,12 +174,11 @@ a{
     
 }
 .item{
-    max-width: 267px;
-    min-width: 200px;
+    width: 267px;
 }
 .item img{
-    max-width:inherit;
-    height:auto;
+    width: 100%;
+    height: auto;
 }
 .item-price{
     margin-top:-65px;
@@ -185,10 +191,15 @@ a{
     font-size: 33px;
 }
 
-.item-description{   
+.item-description{  
     text-align: center;
     text-decoration: underline;
     font-weight: 500;
+}
+@media (max-width: 900px) {
+  .item{
+    width: 200px;
+}
 }
 /*SEO*/
 .features{
@@ -215,9 +226,14 @@ a{
     font-weight: 400;
 }
 .features-list li{
-    max-width: 45%;
+    max-width: 48%;
     margin-bottom: 20px;
     height: auto;
+}
+@media (max-width: 900px) {
+  .item{
+    width: 200px;
+}
 }
 /*BLOG*/
 .blog-and-subscription{
@@ -226,11 +242,7 @@ a{
     margin-bottom: 40px;
 }
 .blog-news{
-    max-width: 560px;
-    min-width: 420px;
-    padding-left: 20px;
-    flex-grow: 2;
-    
+    width: 560px;
     background-image: url(../img/back-strawberries.jpg);
     background-repeat: no-repeat;
 }
@@ -250,16 +262,18 @@ a{
 }
 /*SUBSCRIPTION*/
 .subscription{  
-    max-width: 560px;
-    min-width: 420px;
-    margin-left: 26px;
-    padding-left: 20px;
+    width: 560px;
     background-color: #f8f7f4;
 }
 
 .subscription p{
     font-weight: 400;
     color: #5a5a5a;
+}
+@media (max-width: 900px) {
+  .blog-news, .subscription{
+    width: 420px;
+}
 }
 /*MAP*/
 .map {
