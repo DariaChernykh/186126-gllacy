@@ -7,8 +7,10 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main-style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="site-wrapper">
+             
+    <div  class="container">
+        <header class="main-header">
         <nav class="main-navigation">
             <div class="site-navigation-left">
                 <a class="main-header-logo">
@@ -30,33 +32,40 @@
                 </ul>
             </div>
             <div class="site-navigation-right">
-                <button class="menu-button" aria-label="Поиск"></button>
-                <a class="menu-button" href="login.html">Вход</a>
-                <a class="menu-button" href="cart.html" aria-label="Корзина">Пусто</a>
-                <p class="main-header-contacts">С 10 до 20, ежедневно <br> <span>8 812 450-25-25</span></p> 
+                <button class="menu-button menu-button-search" aria-label="Поиск"></button>
+                <a class="menu-button menu-button-login" href="login.html">Вход</a>
+                <a class="menu-button menu-button-cart" href="cart.html" aria-label="Корзина">Пусто</a>
+                <p class="main-header-contacts">С 10 до 20, ежедневно<br> <span>8 812 450-25-25</span></p> 
             </div>    
         </nav>
-    </header>
-    <main>
-        <div  class="container">
+        </header>
+        <main>
             <h1 class="visually-hidden">Магазин Gllacy</h1>
-            <ul class="background-select-list">
-                <li class="background-select-item">
-                    <input type="radio" class="background-selector visually-hidden" name="background-selectors" id="first-background">
-                    <label class="visually-hidden" for="first-background">Крем-брюле и пломбир с малиновым джемом</label>
-                </li>
-                <li class="background-select-item">
-                    <input type="radio" class="background-selector visually-hidden" name="background-selectors" id="second-background">
-                    <label class="visually-hidden" for="second-background">Шоколадный пломбир и лимонный сорбет</label>
-                </li>
-                <li class="background-select-item">
-                    <input type="radio" class="background-selector visually-hidden" name="background-selectors" id="third-background">
-                    <label class="visually-hidden" for="third-background">Пломбир с помадкой и клубничный щербет</label>
-                </li>
-            </ul>
-        <!--Думаю, что переключение фона надо бы вынести в, например, :before. Или что-то вроде этого. Не уверена, надо ли его было прописывать на данном этапе.-->
-            <a class="button big-button" href="catalog.html">Давайте оба!</a>
-        <!-- ссылка, в каталог. В теории,  могла бы быть кнопка, которая закидывает 2 мороженых с фона в корзину, но надо было бы определять какой фон в данный момент активен.  -->
+            <section class="slider">
+                    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+                    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+                    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+                <div class="slider-controls">
+                    <label for="product-1">Первый</label>
+                    <label for="product-2">Второй</label>
+                    <label for="product-3">Третий</label>
+                </div>
+                <ul class="slider-list">
+                    <li class="slider-item slide" id="slide1">
+                        <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+                        <a class="button big-button" href="catalog.html">Давайте оба!</a>
+                    </li>
+                    <li class="slider-item slide" id="slide2">
+                        <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+                        <a class="button big-button" href="catalog.html">Давайте оба!</a>
+                    </li>
+                    <li class="slider-item slide" id="slide3">
+                        <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+                        <a class="button big-button" href="catalog.html">Давайте оба!</a>
+                    </li>
+                </ul>
+            </section>
+            
             <section class="promo-list">
                 <div class="promo-item promo-raspberries">
                     <h2>Малинка даром!</h2>
@@ -73,26 +82,25 @@
             <h2 class="visually-hidden">Хиты продаж</h2>
                <ul class="item-list">
                     <li class="hit-item item">
-                       
-                        <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                        <img src="img/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                         <p class="item-price">310&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>         
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="hit-item item">
-                        <img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                        <img src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
                         <p class="item-price">380&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-кофейное с кусочками шоколада</p>
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="hit-item item">
-                        <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                        <img src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                         <p class="item-price">355&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
                         <a class="button" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="hit-item item">
-                        <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                        <img src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
                         <p class="item-price">415&#8381;<span>/кг</span></p>
                         <p class="item-description">Сливочное крем-брюле с карамельной подливкой</p>
                         <a class="button" href="#">Быстрый просмотр</a>
@@ -120,15 +128,17 @@
                     <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                     <form action="https://echo.htmlacademy.ru" method="post">
                         <label class="visually-hidden" for="email">Электронная почта</label>
-                        <input id="email" name="email" placeholder="Электронная почта" type="email">
+                        <input class="text-input" id="email" name="email" placeholder="Электронная почта" type="email">
                         <button  class="button" type="submit">Отправить</button>
                     </form>
                 </section>
             </div>
-        </div>
-        <section class="map">
-          <h2 class="visually-hidden">Месторасположение магазина и контакты</h2>
-            <!-- Карта видимо - фон для блока -->
+        
+    </main>
+</div>
+    <section class="map">
+            <h2 class="visually-hidden">Месторасположение магазина и контакты</h2>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9a58c22a3655592c4c723a645ed57d070808ba0f04f2c290bb61f806e423513c&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
             <div class="map-information">
                 <p>Адрес главного офиса и офлайн-магазина: <br> 
                     <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
@@ -140,19 +150,17 @@
                 <a class="button" href="contacts.html">Форма обратной связи</a>
             </div>
         </section> 
-    </main>
     <footer class="main-footer">
         <ul class="footer-social">
-            <li><a class="social-button social-button-tw" href="#" aria-label="Твиттер">Твиттер</a></li>
-            <li><a class="social-button social-button-in" href="#" aria-label="Инстаграм">Инстаграм</a></li>
-            <li><a class="social-button social-button-fb" href="#" aria-label="Фейсбук">Фейсбук</a></li>
-            <li><a class="social-button social-button-vk" href="#" aria-label="Вконтакте">Вконтакте</a></li>
-            <!-- Установлены лейблы, т.к. в дальнейшем надпимей не будет, а только картинки-->
+            <li><a class="social-button social-button-tw" href="#" aria-label="Твиттер"></a></li>
+            <li><a class="social-button social-button-in" href="#" aria-label="Инстаграм"></a></li>
+            <li><a class="social-button social-button-fb" href="#" aria-label="Фейсбук"></a></li>
+            <li><a class="social-button social-button-vk" href="#" aria-label="Вконтакте"></a></li>
         </ul>
         <ul class="footer-menu">
             <li><a class="white-link" href="#">Для поставщиков</a></li>
-            <li><a class="white-link" href="#">О производстве </a></li>
             <li><a class="white-link" href="#">Наши документы</a></li>
+            <li><a class="white-link" href="#">О производстве</a></li>
             <li><a class="white-link" href="#">Экологические стандарты</a></li>
         </ul>
         <p class="footer-copyright">
@@ -164,26 +172,26 @@
     <section class="modal modal-search">
         <h2 class="visually-hidden">Поиск по сайту</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                <label class="visually-hidden" for="search">Поиск</label>
-                <input id="search" type="text" name="search" placeholder="Что ищем?">
+            <label class="visually-hidden" for="search">Поиск</label>
+            <input class="text-input" id="search" type="text" name="search" placeholder="Что ищем?">
         </form>
      </section>
         
      <section class="modal modal-login">
-         <h2 class="visually-hidden">Личный кабинет</h2>
+        <h2 class="visually-hidden">Личный кабинет</h2>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label class="visually-hidden" for="user-login">Логин</label>
-                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин" required>
+                <input class="text-input" id="user-login" type="text" name="login" placeholder="Логин" required>
             </p>
             <p>
-               <label class="visually-hidden" for="user-password">Пароль</label>
-                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль" required>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input class="text-input" id="user-password" type="password" name="password" placeholder="Пароль" required>
             </p>
             <button class="button" type="submit">Войти</button>
+            <p class="login-links"><a class="modal-login-link" href="#">Забыли пароль?</a><br>
+            <a class="modal-login-link" href="#">Регистрация</a></p>
         </form>
-        <a class="modal-login-link" href="#">Забыли пароль?</a>
-        <a class="modal-login-link" href="#">Регистрация</a>
     </section>
         
     <section class="modal modal-connection">
@@ -191,11 +199,11 @@
         <form  class="connection-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="appointment-item">
                 <label class="visually-hidden" for="modal-connection-name">Ваше имя</label>
-                <input id="modal-connection-name" type="text" name="name" placeholder="Как вас зовут?" required>
+                <input class="text-input" id="modal-connection-name" type="text" name="name" placeholder="Как вас зовут?" required>
             </p>
             <p>                
                 <label class="visually-hidden" for="modal-connection-email">Электронная почта</label>
-                <input id="modal-connection-email" name="modal-connection-email" placeholder="Ваша почта для ответа?" type="email" required>
+                <input class="text-input" id="modal-connection-email" name="modal-connection-email" placeholder="Ваша почта для ответа?" type="email" required>
             </p>
             <p>     
                 <label class="visually-hidden" for="modal-connection-text">Текст обращения</label>
@@ -203,7 +211,8 @@
             </p>
             <button class="button" type="submit">Отправить</button>
         </form>
-        <button class="modal-close" type="button" aria-label="Закрытие модального окна">Закрыть</button>
-    </section>        
+        <button class="modal-close" type="button" aria-label="Закрытие модального окна"></button>
+    </section>  
+        
   </body>
 </html>
