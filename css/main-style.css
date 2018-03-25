@@ -40,6 +40,10 @@ input[type="radio"].visually-hidden {
 .second-page{
     background-image: none;
 }
+.second-page h1{
+    font-size: 35px;
+    line-height: 41px;
+}
 .container{
     box-sizing: border-box;
     margin: 0 2.3%;
@@ -183,8 +187,10 @@ input[type="radio"].visually-hidden {
     justify-content: flex-start;
     align-items: flex-start;
     align-self: flex-start;
+    
     padding-left: 7px;
     margin-top: 14px;
+    
     line-height: 18px;
 }
 
@@ -211,11 +217,15 @@ input[type="radio"].visually-hidden {
     padding: 7px 15px;
     margin-left: 5px;
     
+    vertical-align:top;
+    
     position: relative;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     border:0;
 }
+/*как покрасить svg*/
+
 .menu-button-search{
     width: 33px;
     height: 30px;
@@ -224,7 +234,7 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   
-}/*почему он выскакивае вверх?*/
+}
 .menu-button-login{
     padding-left: 45px;
 }
@@ -243,7 +253,7 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
   
 }
-.menu-button-cart{
+.menu-button-cart, .menu-button-full-cart{
     min-width: 117px;
     padding-left: 45px;
 
@@ -263,17 +273,43 @@ input[type="radio"].visually-hidden {
   
 }
 
-.site-navigation-item a:hover, 
+.menu-button-full-cart{
+    color: #333333;
+    background-color: #f7f6f3;
+}
+
+.menu-button-full-cart::before{
+    content: "";
+  
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/cart-red.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.site-navigation-item{
+    position: relative;
+}
+
+.site-navigation-item > a:hover,
+.site-navigation-item > a:focus,
 .menu-button:hover{
     color: #333333;
     background-color: #f7f6f3;
     border-bottom: none;
     border-radius: 15px;
 }
+
 .site-navigation-right p{
     margin: 20px 0 0 auto;
     text-align: right;
 }
+
 .site-navigation-right span{
     display: inline-block;
     padding-top: 5px;
@@ -281,11 +317,24 @@ input[type="radio"].visually-hidden {
     font-size: 22px;
     line-height: 24px;
 }
+
 .site-navigation-inner{
     display: none;
+    min-width: 144px;
+    
+    position: absolute;
+    top: 37px;
+    left: -5px;
+    
+    padding: 0;
     font-size: 14px;
     line-height: 16px;
+    
+    border-radius: 10px;
     background-color: #f8f7f4;
+}
+.site-navigation-item:hover .site-navigation-inner{
+    display: block;
 }
 
 .site-navigation-inner a{    
@@ -296,6 +345,9 @@ input[type="radio"].visually-hidden {
     font-weight: 400;
 }
 
+.site-navigation-inner li:first-child{
+    border-bottom: 1px solid rgba(0, 0, 0, .2)
+}
 .site-navigation-inner a:hover{
     background-color: #fbded7;
 }
@@ -303,15 +355,26 @@ input[type="radio"].visually-hidden {
 .site-navigation-inner a:active{
     background-color: #f6b5a5;
 }
+
+.current-page{    
+    background-color: #d07058;
+    color: #ffffff;
+    border-radius: 15px;  
+}
+.site-navigation-inner .current-page{
+    border-radius: 0;
+}
+
 .button{
     display: inline-block;
-    padding: 12px 20px;
+    vertical-align: middle;
+    padding: 0 22px;/*над этим надо пока подумать*/
+    min-height: 46px;
     
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     color: #ffffff;
-    vertical-align: top;
     text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
@@ -347,33 +410,37 @@ input[type="radio"].visually-hidden {
 /*ПРОМО*/
 .promo-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 35px auto 40px;
 }
 
 .promo-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-sizing: border-box;
+    
     max-width: 560px;
     min-width: 420px;
     min-height: 230px;
-    padding: 0 20px;
+    
+    padding: 15px 20px 25px;
     border-radius: 15px;
 }
 
 .promo-item h2{
-    margin: 16px 0 16px 0;
+    margin: 0;
     font-size: 35px;
     line-height: 41px;
 }
 
 .promo-item p{
-    margin: 0;
     font-size: 18px; 
 }
 
 .promo-item a{
-    float: right;
-    margin: 43px 0 0  0;
+    margin-top: auto;
+    align-self: flex-end;
     
 }
 /*Спускаются при сужении экрана. пока не знаю что с эти сделать*/
@@ -406,12 +473,15 @@ input[type="radio"].visually-hidden {
     
 }
 .item{
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 23.28%;
     max-width: 276px;
     min-width: 200px;
     margin-left: 2.3%;
     position: relative;
+    z-index: 2;
 }
 .item::before{
     content: "";
@@ -427,7 +497,6 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
     
 }
-
 .item:nth-child(4n+1) {
     margin-left: 0;
 }
@@ -455,6 +524,19 @@ input[type="radio"].visually-hidden {
     text-decoration: underline;
     font-weight: 500;
 }
+.item .button{
+    display: none;
+}
+/*.item:hover{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .2);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    box-sizing: content-box;
+    padding: 5px;
+} 
+.item:hover .button{
+    display: block;
+}надо вырвать из потока*/
 
 /*SEO*/
 .features{
@@ -496,57 +578,30 @@ input[type="radio"].visually-hidden {
 .features-list li:nth-child(2n){
     margin-left: 1%;
 }
-.feature-production::before{
+.feature-img::before{    
     content: "";
-  
+    
     position: absolute;
     top: 3px;
     left: 0;
     
     width: 49px;
     height: 49px;
-    background-image: url("../img/seo-icecream.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.feature-production::before{
+    background-image: url("../img/seo-icecream.svg");
 }
 .feature-partnership::before{
-    content: "";
-  
-    position: absolute;
-    top: 3px;
-    left: 0;
-    
-    width: 49px;
-    height: 49px;
     background-image: url("../img/seo-cow.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 .feature-product::before{
-    content: "";
-  
-    position: absolute;
-    top: 3px;
-    left: 0;
-    
-    width: 49px;
-    height: 49px;
     background-image: url("../img/seo-eco.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 .feature-delivery::before{
-    content: "";
-  
-    position: absolute;
-    top: 3px;
-    left: 0;
-    
-    width: 49px;
-    height: 49px;
     background-image: url("../img/seo-thermometer.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 /*BLOG*/
 .blog-and-subscription{
@@ -588,21 +643,24 @@ input[type="radio"].visually-hidden {
 /*SUBSCRIPTION*/
 
 .subscription{
-    box-sizing: border-box;
-    padding: 20px;
     max-width: 560px;
     min-width: 420px;
     min-height: 220px;
     
     border-radius: 15px;
-    border: 6px solid transparent;
-    border-image: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 5px, #92cdff 5px, #92cdff 11px, #f8f7f4 11px, #f8f7f4 16px, #fe9e90 16px, #fe9e90 22px );
-    background-color: #f8f7f4;
-    border-image-slice: 1;
-    /* какой-то тухлый вариант, как сделать лучше?*/
+    background: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 5px, #92cdff 5px, #92cdff 11px, #f8f7f4 11px, #f8f7f4 16px, #fe9e90 16px, #fe9e90 22px);
     
 }
-
+.subscription div{
+    box-sizing: border-box;
+    width: inherit;
+    min-height: 206px;
+    padding: 20px;
+    margin: 7px;
+    
+    border-radius: 15px;
+    background-color: #f8f7f4;
+}
 .subscription p{
     font-weight: 400;
     color: #5a5a5a;
@@ -647,49 +705,45 @@ input[type="radio"].visually-hidden {
     max-width: 1146px;
     min-width: 860px;
     margin: 0 auto;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .main-footer ul{
     list-style: none;
     display: flex;
     
 }
-.footer-social li{
-    width: 38px;
-    height: 38px;
+.footer-social li:not(:last-child){
+    margin-right: 11px;
 }
 .social-button{
-    width: 38px;
-    height: 38px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 3px;
     
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(255,255,255,.7);
+    opacity: .8;
 }
-.social-button:hover{
-    background-color: rgba(255, 255, 255, 0.7);
+.social-button:hover,.social-button:focus{
+    opacity: 1;
 }
-/* у меня нет разумного объяснения, почему не реагирует на ширину*/
+
 .social-button-tw{  
     background-image: url("../img/social-tw.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+
 }
 .social-button-in{    
     background-image: url("../img/social-ins.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 .social-button-fb{    
     background-image: url("../img/social-fb.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 .social-button-vk{    
     background-image: url("../img/social-vk.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 }
 .footer-menu{
     max-height: 60px;
@@ -778,11 +832,14 @@ input[type="radio"].visually-hidden {
 .modal-login-link:hover, 
 .modal-login-link:active{
     color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 .login-links{
     width:50%;
     display: inline-block;
-    margin: 5px 0 0 15px;
+    vertical-align: middle;
+    
+    margin-left: 15px;;
 }
 .modal-connection{
     width: 478px;
@@ -819,71 +876,91 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
 /* КАТАЛОГ!!!*/
-.current-page > a{    
-    background-color: #d07058;
-    color: #ffffff;
-    
-}
-.full-cart{
-    color: #333333;
-    background-color: #f7f6f3;
-}
+
 .breadcrumbs{
     display:flex;
     justify-content: flex-start;
+    
+    margin-top: -25px;
+    padding: 0;
+    
     font-size: 14px;
     line-height: 16px;
     list-style: none;
     font-weight: 400;
 }
-.second-page h1{
-    font-size: 35px;
-    line-height: 41px;
+
+.breadcrumbs li:not(:last-child)::after{
+    content: "»";
+    margin: 0 6px;
 }
+
 /*FILTERS*/
 .filter {
     max-width: 880px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     font-weight: 500;
 }
 .filters label, 
 .filters legend{
     font-size: 14px;
-    line-height: 16px;
-    
+    line-height: 16px;  
 }
+.filters legend{
+    margin-left: 16px;
+}
+.filters label{
+    cursor: pointer;  
+}
+
 .filters input, 
 .filter-button{
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
 }
-.filters ul, 
-.filters select, 
-.background-input, 
-.filter-button{
+.fieldset-filter ul, 
+.filter-button,
+.filter-select,
+.filter-input-range{
+    height: 38px;
+    padding: 0 16px;
+    
+    border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.2);
+    
+}
+.filter-input-range{
+    margin: 0;
+    vertical-align: center;
 }
 .filters ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    margin: 0;
     list-style: none;
 }
-
-.filters select{
-    color: #ffffff;
+.filter-option{
+    padding: 0 25px;
 }
-
-.filters select:hover{
+.filter-select{
+    color: #ffffff;
+    width: 193px;
+}
+.filter-select:hover{
     color: #323232;
 }
-.background-input input{
-    cursor: pointer;
-}
+
 .filter-button{
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(255, 255, 255);
+    align-self: center;
+    margin-top:10px;
+    
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .filter-button:hover{
@@ -895,40 +972,99 @@ input[type="radio"].visually-hidden {
   background-color: rgb(237, 237, 237);
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
+.fieldset-filter{
+    border: none;
+}
+
 /*pagination-list*/
+.pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .pagination-list{
     display: flex;
     justify-content: flex-end;
     list-style: none;
+    padding: 0;
 }
 
 .pagination-list a{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 3px;
+    
+    padding: 1px 7px;
+    border-radius: 50%;
+    
     text-decoration: none;
+     
 }
 .pagination-item a:hover{
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.pagination-item-current a, 
+.pagination-link-current, 
 .pagination-item a:active{
-    background-color: #ffffff; color: #323232;
+    background-color: #ffffff; 
+    color: #323232;
 }
+.pagination-link-prev, .pagination-link-next{
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    margin: 6px 3px;
 
+    background-image: url(../img/icon-left-small.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.pagination-link-prev{
+    transform: scaleX(-1);
+}
+.pagination-link-next{/*нужно обелить*/
+}
 /*CART*/
 .modal-cart{
     width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .products-in-cart{
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
     color: #323232;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.products-in-cart td{
+    padding: 5px;
 }
 .products-in-cart span{
     color: #999999;
 }
-.products-in-cart tr:last-child{
+
+.delete-position{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 6px 3px;
+
+    background-image: url(../img/cross-small.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.products-in-cart img{
+    border-radius: 50%;
+}
+.modal-cart p{    
+    color: #323232;
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
+}
+.button-cart{
+    
 }
