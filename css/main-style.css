@@ -52,7 +52,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: top center;
   
-  transition: background-image 0.5s ease, background-color 0.5s ease;
+  /*transition: background-image 0.5s ease, background-color 0.5s ease;*/
 }   
 .second-page .site-wrapper{
     background-image: none;
@@ -152,6 +152,10 @@ input[type="radio"].visually-hidden {
 #product-2:checked ~ .site-wrapper label[for="product-2"],
 #product-3:checked ~ .site-wrapper label[for="product-3"] {
   background-color: #ffffff;
+}
+.site-wrapper label:hover{
+    background-color:rgba(255, 255, 255, .5)
+    
 }
 /* HEADER */
 .main-navigation{
@@ -377,6 +381,8 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
 }
 
+
+
 /* КНОПКИ */
 .button{
     display: flex;
@@ -406,7 +412,7 @@ input[type="radio"].visually-hidden {
     border: none;
 }
 .input-button{    
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 0 22px;
     min-height: 46px;
@@ -567,10 +573,11 @@ input[type="radio"].visually-hidden {
     font-size: 33px;
 }
 
-.item-description{  
+.item-description{ 
     margin-top: 20px;
     text-align: center;
     text-decoration: underline;
+    
     font-weight: 500;
 }
 
@@ -578,7 +585,9 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.3);
+    padding-bottom: 1.1%;
+    background: rgba(255, 255, 255, 0.2);
+    
     border-radius: 5px;
     z-index: 2;
 }
@@ -712,11 +721,18 @@ input[type="radio"].visually-hidden {
     font-weight: 400;
     color: #5a5a5a;
 }
-
+.subscription form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subscription input{
+    flex-grow: 1;
+    margin-right: 10px;
+}
 /*MAP*/
 .map {
-    max-width: 1200px;
-    min-width: 900px;
+    width: 100%;
     margin: 0 auto 10px;
     padding: 0;
     min-height: 430px;
@@ -910,16 +926,21 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-connection{
+    display: none;
     width: 478px;
-    position: relative;
-}
+    position: absolute;
+    top: 338px;
+    left: 40%;
+    z-index: 4;
+} /*добавить открытие по клику*/
+
 .modal-connection input{
     width: 271px;
 }
 .modal-connection textarea{
     width: 432px;
-    height: 153px;
-    align-self: stretch;
+    height: 155px;
+    
 }
 .modal-connection h2{
     margin-top:0;
@@ -1036,8 +1057,61 @@ input[type="radio"].visually-hidden {
     margin-left: 16px;
 }
 .filters label{
+    position: relative;
     cursor: pointer;  
 }
+.filters label:hover{
+    background: none;
+    
+}
+.filter-fat-content-list label::before, 
+.filter-additive-list label::before{
+    content: "";
+    position: absolute;
+    
+    width: 25px;
+    height: 25px;
+    left: -30px;
+    
+    box-sizing: border-box;
+    opacity: .8;
+}
+.filter-fat-content-list label::before{
+    background-image: url(../img/radio-off.svg);
+    background-repeat: no-repeat;
+    position: 0 0;
+}
+.filter-additive-list label::before{
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    position: 0 0;
+}
+.filter-fat-content-list label:hover::before, 
+.filter-additive-list label:hover::before{
+    opacity: 1;
+}
+
+.filter-input-radio:checked ~ label::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+
+.filter-input-checkbox:checked ~ label::before {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.filter-input-radio:focus + label::before, /*выбирает только  один инпут, а остальные пропускает*/
+.filter-input-checkbox:focus + label::before{
+    opacity: 1;
+    border: 1px solid red;
+}
+
+.filter-input-radio:disabled ~ label, 
+.filter-input-checkbox:disabled ~ label {
+    opacity: .4;
+    cursor: default;
+}
+
 
 .filters input, 
 .filter-button{
@@ -1081,21 +1155,22 @@ input[type="radio"].visually-hidden {
     border: 2px solid rgb(255, 255, 255);
 }
 
-.filter-button:hover{
+.filter-button:hover,
+.filter-button:focus{
     background-color: #ffffff;
     color: #323232;
+    outline: none;
 }
 
 .filter-button:active{
   background-color: rgb(237, 237, 237);
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
+/*Range*/
 .fieldset-filter{
     border: none;
     padding: 0;
 }
-
-
 .filter-range-title{
     margin-left: 16px;
     font-size: 14px;
@@ -1108,7 +1183,6 @@ input[type="radio"].visually-hidden {
 .range-controls {
     position: relative;
     width: 200px;
-    margin-top: 6px;
     padding-top: 18px;
     box-sizing: border-box;
 }
