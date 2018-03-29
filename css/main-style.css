@@ -35,6 +35,8 @@ input[type="radio"].visually-hidden {
 
 
 .second-page h1{
+    margin: -10px 0 26px 0;
+    
     font-size: 35px;
     line-height: 41px;
 }
@@ -42,7 +44,6 @@ input[type="radio"].visually-hidden {
     max-width: 1200px;
     min-width: 900px;
     margin: 0 auto;
-    position: relative;
     box-sizing: border-box;
 }
 .main-header, .main-content, .main-footer{
@@ -77,7 +78,7 @@ input[type="radio"].visually-hidden {
 .slider {
     position: relative;
   
-    padding-top: 240px;
+    padding-top: 260px;
     margin: 0 auto;
   
     text-align: center;
@@ -192,7 +193,7 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     align-items: flex-start;
     
-    padding-left: 7px;
+    padding-left: 10px;
     margin-top: 14px;
     line-height: 18px;
 }
@@ -203,15 +204,15 @@ input[type="radio"].visually-hidden {
 .site-navigation-item  > a{
     position: relative;
     display: block;
-    margin: 7px 15px;
-    border-radius: 15px;
+    margin: 7px 14px 7px 13px;
+    border-radius: 25px;
 }
 
 .site-navigation-item:hover > a,
 .site-navigation-item > a:focus/*,
 .site-navigation-item > a:active*/{
     margin: 0;
-    padding: 7px 15px;
+    padding: 7px 14px 7px 13px;
     color: #333333;
     background-color: #f7f6f3;
 }
@@ -234,10 +235,10 @@ input[type="radio"].visually-hidden {
 
 .site-navigation .current-main-page{    
     margin: 0;
-    padding: 7px 15px;
+    padding: 7px 14px 7px 13px;
     
     color: #ffffff;
-    border-radius: 15px; 
+    border-radius: 25px; 
     background-color: #d07058;
 }
 
@@ -250,17 +251,17 @@ input[type="radio"].visually-hidden {
 }
 .site-navigation-inner{
     display: none;
-    min-width: 144px;
+    min-width: 143px;
     
     position: absolute;
     
     padding: 0;
-    top:34px;
-    left:-5px;
+    top: 37px;
+    left: -7px;
     font-size: 14px;
     line-height: 16px;
     
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 20px 20px 0 rgba(0,0,0,.4);
     z-index: 1;
@@ -275,15 +276,18 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-inner a{ 
     display: block;
-    padding: 10px 20px;
+    padding: 11px 20px;
     color: #333333;
     background-color: #f8f7f4;
 }
 
 .inner-item:not(:first-of-type) a{
     font-weight: 400;
+    padding-bottom: 4px;
 }
-
+.inner-item:last-of-type a{
+    padding-bottom: 12px;
+}
 .site-navigation-inner li:first-child{
     position: relative;
 }
@@ -291,12 +295,12 @@ input[type="radio"].visually-hidden {
     content: "";
     position: absolute;
     
-    top: 36px;
+    top: 38px;
     left: 5%;
     width: 90%;
     height: 1px;
     
-    background: rgba(0, 0, 0, .1);
+    background: rgb(208, 207, 203);
     background-repeat: no-repeat;
     z-index: 1;
     
@@ -336,7 +340,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
+    border-radius: 25px;
 }
 .menu-button-search{
     display: inline-flex;
@@ -433,7 +437,7 @@ input[type="radio"].visually-hidden {
 .input-button{    
     display: inline-flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 25px;
     min-height: 46px;
     
     font-size: 18px;
@@ -600,19 +604,22 @@ input[type="radio"].visually-hidden {
 
 .item-description{ 
     text-align: center;
-    /*padding: 16px 0;*/
+    margin-top: 23px;
     text-decoration: underline;
     
     font-weight: 500;
 }
 
 .item:hover .item-content{
+    
     position: absolute;
+    
     top: 0;
     left: 0;
-    padding-bottom: 1.1%;
-    background: rgba(255, 255, 255, 0.2);
     
+    padding-bottom: 1.1%;
+    background-color: rgba(248, 247, 244, .2);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     z-index: 2;
 }
@@ -716,7 +723,7 @@ input[type="radio"].visually-hidden {
 }
 .blog-news-transition{
     max-width: 64%;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .blog-news-transition a{
@@ -929,11 +936,17 @@ input[type="radio"].visually-hidden {
 .modal-login{
     
     width: 277px;
-    padding: 20px;
+    padding: 20px 19px;
     
-    top: 39px;
-    right: 0;
-    
+    top: 35px;
+    right: 0;   
+}
+
+.login-form p{
+    margin:0 0 24px;
+}
+.login-form p:nth-child(2){
+    margin-bottom: 10px;
 }
 .modal-full-cart{
     width: 570px;
@@ -979,8 +992,9 @@ input[type="radio"].visually-hidden {
     width: 478px;
     
     position: absolute;
-    bottom: 40%;
-    left: 50%;}
+    top: 340px;;
+    left: 36%;
+}
 
 .modal-connection input{
     width: 271px;
@@ -1127,7 +1141,7 @@ input[type="radio"].visually-hidden {
     display:flex;
     justify-content: flex-start;
     
-    margin-top: -25px;
+    margin-top: -32px;
     padding: 0;
     
     font-size: 14px;
@@ -1271,6 +1285,7 @@ input[type="radio"].visually-hidden {
 .fieldset-filter{
     border: none;
     padding: 0;
+    margin-bottom: 20px;
 }
 .filter-range-title{
     margin-left: 16px;
