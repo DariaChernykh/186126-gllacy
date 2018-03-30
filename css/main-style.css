@@ -40,10 +40,11 @@ input[type="radio"].visually-hidden {
     font-size: 35px;
     line-height: 41px;
 }
-.container{
+.container, .main-footer{
     max-width: 1200px;
     min-width: 900px;
     margin: 0 auto;
+    position: relative;
     box-sizing: border-box;
 }
 .main-header, .main-content, .main-footer{
@@ -284,6 +285,7 @@ input[type="radio"].visually-hidden {
 .inner-item:not(:first-of-type) a{
     font-weight: 400;
     padding-bottom: 4px;
+    padding: 6px 20px 9px;
 }
 .inner-item:last-of-type a{
     padding-bottom: 12px;
@@ -805,7 +807,6 @@ input[type="radio"].visually-hidden {
 .main-footer{
     display: flex;
     justify-content: space-between;
-    padding: 0;
 }
 .main-footer ul{
     list-style: none;
@@ -904,7 +905,7 @@ input[type="radio"].visually-hidden {
     display: none;
     box-sizing: border-box;
     position: absolute;
-    padding: 20px 15px;
+    padding: 20px 15px 20px 30px;
     background-color: #f8f7f4;
     border-radius: 6px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -989,19 +990,20 @@ input[type="radio"].visually-hidden {
 
 .modal-connection{
     display: none;
-    width: 478px;
+    width: 477px;
     
-    position: absolute;
-    top: 340px;;
-    left: 36%;
+    position: fixed;
+    top: 35%;
+    left: 35%;
 }
 
 .modal-connection input{
     width: 271px;
 }
 .modal-connection textarea{
-    width: 432px;
+    width: 430px;
     height: 155px;
+    resize: none;
     
 }
 .modal-connection h2{
