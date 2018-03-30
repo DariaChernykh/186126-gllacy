@@ -51,11 +51,12 @@
                     <a class="menu-button menu-button-login" href="login.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19"><g fill="#FFF"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
                     Вход</a>
+                    
                     <section class="modal modal-login">
                         <h2 class="visually-hidden">Личный кабинет</h2>
                         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                             <p>
-                                <label class="visually-hidden" for="user-login">Логин</label>
+                                <label class="visually-hidden" for="user-login">Электронная почта</label>
                                 <input class="text-input" id="user-login" type="text" name="login" placeholder="Электронная почта" required>
                             </p>
                             <p>
@@ -206,7 +207,7 @@
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9a58c22a3655592c4c723a645ed57d070808ba0f04f2c290bb61f806e423513c&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
                 <div class="container">          
                     <div class="map-information">
-                        <p>Адрес главного офиса и офлайн-магазина: <br> 
+                        <p>Адрес главного офиса<br>и офлайн-магазина: <br> 
                         <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
                         </p>
                         <p>Для заказов по телефону:<br>
@@ -218,7 +219,7 @@
                 </div> 
             </section>
             
-            <section class="modal modal-connection">
+            <section class="modal-connection">
                 <h2>Мы обязательно вам ответим!</h2>
                 <form  class="connection-form" action="https://echo.htmlacademy.ru" method="post">
                     <p class="appointment-item">
@@ -237,7 +238,8 @@
                 </form>
                 <button class="modal-close" type="button" aria-label="Закрытие модального окна"></button>
             </section> 
-
+            <div class="modal-overlay"></div>
+            
         
         <footer class="main-footer">
         <ul class="footer-social">
@@ -259,37 +261,38 @@
             </footer>
         </div>
 <script>
-  var link = document.querySelector(".connection-button");
+    var link = document.querySelector(".connection-button");
   
-  var popup = document.querySelector(".modal-connection");
-  var close = popup.querySelector(".modal-close");
+    var popup = document.querySelector(".modal-connection");
+    var overlay = document.querySelector(".modal-overlay")
+    var close = popup.querySelector(".modal-close");
   
-  var form = popup.querySelector(".connection-form");
-  var login = popup.querySelector("[name=modal-connection-name]");
-  var email = popup.querySelector("[name=modal-connection-email]");
+    var form = popup.querySelector(".connection-form");
+    var login = popup.querySelector("[name=modal-connection-name]");
+    var email = popup.querySelector("[name=modal-connection-email]");
   
-  var isStorageSupport = true;
-  var storage = "";
+    var isStorageSupport = true;
+    var storage = "";
 
-  try {
-    storage = localStorage.getItem("login");
+    try {
+        storage = localStorage.getItem("login");
   } catch (err) {
-    isStorageSupport = false;
+      isStorageSupport = false;
   }
   
   link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal-show");
-    
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        overlay.classList.add("modal-show-overlay")
     if (storage) {
-      login.value = storage;
-      email.focus();
+        login.value = storage;
+        email.focus();
     } else {
-      login.focus();
+        login.focus();
     }
   });
   
-  close.addEventListener("click", function (evt) {
+    close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
