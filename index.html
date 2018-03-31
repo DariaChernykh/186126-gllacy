@@ -296,6 +296,7 @@
     evt.preventDefault();
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
+    overlay.classList.remove("modal-show-overlay");
   });
   
   form.addEventListener("submit", function (evt) {
@@ -317,6 +318,7 @@
       if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
+        overlay.classList.remove("modal-show-overlay");
       }
     }
   });
