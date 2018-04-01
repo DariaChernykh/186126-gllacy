@@ -35,7 +35,7 @@ input[type="radio"].visually-hidden {
 
 
 .second-page h1{
-    margin: -10px 0 28px 0;
+    margin: -10px 0 24px 0;
     
     font-size: 35px;
     line-height: 41px;
@@ -50,11 +50,7 @@ input[type="radio"].visually-hidden {
 .main-header, .main-content{
     padding: 0 2.3%;
 }
-.second-page .container{
-  background: linear-gradient(to bottom, rgba(255,255,255,.2)0%,rgba(255,255,255,0.02) 35%,rgba(255,255,255,0) 40%); 
-    
 
-}
 
  /* СЛАЙДЕР */   
 .site-wrapper {
@@ -65,7 +61,7 @@ input[type="radio"].visually-hidden {
   
 }   
 .second-page .site-wrapper{
-    background-image: none;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,.2)0%,rgba(255,255,255,0.02) 35%,rgba(255,255,255,0) 40%); 
 }
 .site-wrapper::before,
 .site-wrapper::after {
@@ -606,7 +602,7 @@ input[type="radio"].visually-hidden {
 
 .item-price{
     align-self: flex-start;
-    margin: -59px 0 0 -1px;
+    margin: -61px 0 0 -1px;
     font-size: 45px;
     line-height: 45px;
 }
@@ -616,11 +612,11 @@ input[type="radio"].visually-hidden {
 }
 
 .item-description{ 
+    max-width: 256px;
     text-align: center;
     margin-top: 21px;
     margin-bottom: 7px;
     text-decoration: underline;
-    
     font-weight: 500;
 }
 
@@ -1217,10 +1213,11 @@ input[type="radio"].visually-hidden {
     margin: 0 6px;
 }
 .second-page .item-list{
-    margin-top: 10px;
+    margin-top: 12px;
+    margin-bottom: 22px;
 }
 .second-page .item{
-    padding-bottom: 10px;
+    margin-bottom: 7px;
 }
 /*FILTERS*/
 .filter {
@@ -1259,10 +1256,10 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
     opacity: .8;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 .filter-additive-list label::before{
-    top:-1px;
+    top: -2px;
 }
 .filter-fat-content-list label::before{
     background-image: url(../img/radio-off.svg);
@@ -1342,17 +1339,20 @@ input[type="radio"].visually-hidden {
 
     /* for FF */
     -moz-appearance: none;
-    text-indent: 0.01px; 
+}
+
+.filter-select::-ms-expand {
+  display: none;
 
 }
+:root .filter-select{
+    border: none;
+}
+
 .fieldset-filter-select svg{
     position: absolute;
     bottom: 20%;
     right: 15px;
-}
-
-select::-ms-expand {
-  display: none;
 }
 
 .filter-select:hover, .filter-select:focus{
