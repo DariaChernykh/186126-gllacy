@@ -542,6 +542,10 @@ input[type="radio"].visually-hidden {
     padding: 0;
     list-style: none;   
 }
+.hit-items .item-list{
+    margin-top: 27px;
+}
+
 .item{
     position: relative;
     width: 24.8%;
@@ -589,8 +593,8 @@ input[type="radio"].visually-hidden {
     content: "";
   
     position: absolute;
-    top: 2.2%;
-    left: 2.2%;
+    top: 3.2%;
+    left: 4.2%;
     
     width: 61px;
     height: 61px;
