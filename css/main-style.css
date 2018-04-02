@@ -350,6 +350,7 @@ input[type="radio"].visually-hidden {
 .menu-button-search{
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     
     width: 32px;
     height: 32px;
@@ -404,6 +405,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-right span{
     display: inline-block;
+    vertical-align: bottom;
     padding-top: 5px;
     
     font-size: 22px;
@@ -569,6 +571,7 @@ input[type="radio"].visually-hidden {
 }
 .item-img img{
     width: 100%;
+    height: auto;
     border-radius: 50%;
 }
 .item-button-container{
@@ -983,6 +986,7 @@ input[type="radio"].visually-hidden {
 
 .menu-search, .menu-login, .menu-cart{ 
     display: inline-block;
+    vertical-align: top;
     position: relative;
     padding-bottom: 10px;
 }
@@ -1118,7 +1122,7 @@ input[type="radio"].visually-hidden {
     width: 225px;
 }
 .delete-position{
-    display: inline-block;
+    display: block;
     width: 11px;
     height: 11px;
     margin: 6px 3px;
